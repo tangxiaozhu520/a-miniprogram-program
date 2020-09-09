@@ -1,0 +1,83 @@
+/* pages/detail/detail.wxss */
+page{
+  padding-bottom: 90rpx;
+}
+.swiper_wrap {
+  height: 65vw;
+  text-align: center;
+}
+.swiper_wrap .swiper_item image{
+  width: 60%;
+}
+.goods_price{
+  color: var(--themeColor);
+  font-weight: 700;
+  padding: 0 20rpx;
+  font-size: 32rpx;
+}
+.goods_name_wrap{
+  display: flex;
+  padding: 20rpx;
+  
+}
+.goods_name_wrap .goods_name{
+  flex: 1;
+}
+.goods_name_wrap .goods_icon{
+  text-align: center;
+  width:140rpx;
+  border-left: 1px solid #000;
+}
+.goods_name_wrap .goods_icon .icon-shoucang1{
+  color: orangered;
+}
+.goods_info .goods_info{
+  color: var(--themeColor);
+  font-weight: 700;
+  font-size: 32rpx;
+  padding: 20rpx;
+  border-bottom: 10rpx solid #eee;
+  border-top: 10rpx solid #eee;
+}
+.tool_bar{
+  display: flex;
+  flex-wrap: nowrap;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+}
+.tool_bar .tool_item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 24rpx;
+}
+.tool_bar .tool_item button{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.tool_bar .tool_cart{
+  flex: 2;
+  background-color: #FFA500;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.tool_bar .tool_buy{
+  flex: 2;
+  background-color: #EB4450;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+

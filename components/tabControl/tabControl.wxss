@@ -1,0 +1,18 @@
+/* components/tabControl/tabControl.wxss */
+.tab_wrap{
+  display: flex;
+  font-size: 30rpx;
+  background-color: #fff;
+}
+.tab_wrap .tab_item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab_wrap .tab_item text{
+  padding: 24rpx 24rpx;
+}
+.tab_wrap .active text{
+  border-bottom: 5rpx solid var(--themeColor);
+}

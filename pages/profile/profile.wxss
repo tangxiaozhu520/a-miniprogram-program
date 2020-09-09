@@ -1,0 +1,107 @@
+/* pages/profile/profile.wxss */
+page{
+  background-color: #eee;
+  color: #666;
+}
+.user_info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45vh;
+  background-color: #EB4450;
+  overflow: hidden;
+}
+.user_info button{
+color: yellowgreen;
+border: 1px solid currentColor;
+  
+}
+.user_info .user_detail{
+  text-align: center;
+  position: relative;
+  
+}
+.user_info .user_detail .img_bg{
+  width: 100vw;
+  height: 48vh;
+  filter: blur(10rpx);
+}
+.user_info .user_detail .user_avatarUrl{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+  /* width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 40rpx; */
+}
+.user_info .user_detail .user_avatarUrl image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  margin-bottom: 40rpx;
+}
+.user_info .user_detail .user_avatarUrl .user_nickName{
+  color: #fff;
+  font-size: 32rpx;
+}
+.main_content{
+  position: relative;
+  margin-top: -60rpx;
+  padding: 0 40rpx;
+}
+.main_content .history{
+  background-color: #fff;
+  display: flex;
+  padding: 10rpx;
+  margin-bottom: 30rpx;
+}
+.main_content .history .item{
+  flex: 1;
+  text-align: center;
+}
+.main_content .history .item .nums{
+  color: var(--themeColor);
+}
+.my_orders{
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+.my_orders .orders_title{
+  padding: 20rpx 15rpx;
+  border-bottom: 1px solid #ccc;
+}
+.my_orders .detail_wrap{
+  display: flex;
+}
+.my_orders .detail_wrap .detail_item{
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.my_orders .detail_wrap .detail_item .iconfont{
+  color: var(--themeColor);
+  font-size: 36rpx;
+}
+.address{
+  background-color: #fff;
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+}
+.service{
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+.service .item{
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+.share{
+  background-color: #fff;
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+}

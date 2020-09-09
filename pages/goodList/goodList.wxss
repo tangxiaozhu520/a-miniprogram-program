@@ -1,0 +1,35 @@
+/* pages/goodList/goodList.wxss */
+.goodslist_wrap{
+  padding: 20rpx 0;
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+.goodslist_wrap .item_img{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goodslist_wrap .item_img image{
+  width: 80%;
+}
+.goodslist_wrap .item_content{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.goodslist_wrap .item_content .item_title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+}
+.goodslist_wrap .item_content .item_price{
+  padding-top: 40rpx;
+  color: #EB4581;
+  font-size: 34rpx;
+  
+}

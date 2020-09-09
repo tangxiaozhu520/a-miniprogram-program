@@ -1,0 +1,53 @@
+/* pages/category/cate.wxss */
+page{
+  height: 100%;
+}
+.cates{
+  height: 100%;
+}
+.cates .scroll_wrap {
+  display: flex;
+  height: calc(100vh - 90rpx);
+}
+.scroll_wrap .scroll_left{
+  flex: 2;
+  
+}
+.scroll_wrap .scroll_left .active{
+  color: var(--themeColor);
+  border-left: 5px solid currentColor;
+}
+.scroll_wrap .scroll_left .scroll_left_item{
+  font-size: 30rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.scroll_wrap .scroll_right{
+  flex: 5;
+
+}
+.scroll_right_item .item1_title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scroll_right_item .item1_title text{
+  padding: 0 40rpx;
+}
+.scroll_right_item .item1_imgs{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.scroll_right_item .item1_imgs navigator{
+  width: 33.33%;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.scroll_right_item .item1_imgs navigator image{
+  width: 50%;
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "search_Input":"/components/searchInput/search_Input",
+    "tabControl":"/components/tabControl/tabControl"
+  },
+  "navigationBarTitleText":"商品列表",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle":"dark"
+}

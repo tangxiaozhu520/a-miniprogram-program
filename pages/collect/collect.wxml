@@ -1,0 +1,18 @@
+<!--pages/collect/collect.wxml-->
+<tabControl titles="{{titles}}"></tabControl>
+<view class="cates_wrap">
+  <view class="cates_item">全部</view>
+  <view class="cates_item">正在热卖</view>
+  <view class="cates_item">即将上线</view>
+</view>
+<view class="content">
+  <navigator class="collect_item" wx:for="{{collectList}}" wx:key="goods_id" url="/pages/detail/detail?goods_id={{item.goods_id}}">
+    <view class="item_img">
+      <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+    </view>
+    <view class="item_info">
+      <view class="item_title">{{item.goods_name}}</view>
+      <view class="item_price">￥{{item.goods_price}}</view>
+    </view>
+  </navigator>
+</view>

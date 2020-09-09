@@ -1,0 +1,30 @@
+<!--pages/feedback/feedback.wxml-->
+<tabControl titles="{{titles}}"></tabControl>
+<view class="question_wrap">
+  <view class="title">问题的种类</view>
+  <view class="detail_wrap">
+    
+    <view class="item">功能建议</view>
+    <view class="item">购买遇到问题</view>
+    <view class="item">性能问题</view>
+    <view class="item">其它</view>
+  </view>
+</view>
+<view class="content">
+  <view class="desc">
+    <textarea placeholder="请描述下您的问题" bindinput="handleInput" value="{{textValue}}"></textarea>
+  </view>
+  <view class="img_tool">
+    <button bindtap="handleChooseImage">+</button>
+    <view class="imgs_list" wx:for="{{imgList}}" wx:key="*this" bindtap="removeImg" data-index="{{index}}">
+      <image class="img_item" src="{{item}}"></image>
+      <view class="icon">
+        <icon type="clear" size="25" color="red"></icon>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="btn_wrap">
+    <button type="warn" bindtap="handleSubmit" > <icon type="success_no_circle" color="#fff" ></icon> 提交</button>
+</view>
+

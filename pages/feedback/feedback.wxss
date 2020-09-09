@@ -1,0 +1,72 @@
+/* pages/feedback/feedback.wxss */
+page{
+  background-color: #eee;
+}
+
+.question_wrap .title{
+  padding: 20rpx;
+}
+.question_wrap .detail_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.question_wrap .detail_wrap .item{
+  width: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 40rpx;
+  margin-left: 30rpx;
+  padding: 15rpx 0;
+}
+.content {
+  padding: 20rpx;
+}
+.content .desc textarea{ 
+  width: 100%;
+  background-color: #fff; 
+  padding-top: 10rpx;
+  
+}
+.content .img_tool{
+  background-color: #fff;
+  display: flex;
+}
+.content .img_tool button{
+  margin: 0;
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+  margin-bottom: 40rpx;
+}
+.content .img_tool .imgs_list{
+  margin-left: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 15rpx;
+  position: relative;
+  
+}
+.content .img_tool .imgs_list image{
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+.content .img_tool .imgs_list .icon{
+  position: absolute;
+  top: -20rpx;
+  right: -30rpx;
+}
+.btn_wrap{
+  padding: 20rpx;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.btn_wrap button{
+  margin: 0;
+  width: 200rpx;
+}
+

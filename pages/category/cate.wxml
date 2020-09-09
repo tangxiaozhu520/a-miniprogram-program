@@ -1,0 +1,25 @@
+<!--pages/category/cate.wxml-->
+<view class="cates">
+  <search_Input></search_Input>
+  <view class="scroll_wrap">
+      <scroll-view scroll-y class="scroll_left">
+        <view class="scroll_left_item {{currentIndex===index ? 'active' : ''}}" wx:for="{{cateLeftList}}" wx:key="*this" bindtap="handleLeftItem" data-index="{{index}}">
+          {{item}}
+        </view>
+      </scroll-view>
+      <scroll-view scroll-y class="scroll_right" scroll-top="{{scroll_top}}">
+        <view class="scroll_right_item" wx:for="{{cateRightList}}" wx:key="cat_id" wx:for-item="item1">
+          <view class="item1_title">
+            /<text>{{item1.cat_name}}</text>/
+          </view>
+          <view class="item1_imgs">
+            <navigator wx:for="{{item1.children}}" wx:for-item="item2" wx:key="cat_id" url="/pages/goodList/goodList?cid={{item2.cat_id}}">
+              <image src="{{item2.cat_icon}}" mode="widthFix"></image>
+              <view class="item2_name">{{item2.cat_name}}</view>
+            </navigator>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+</view>
+

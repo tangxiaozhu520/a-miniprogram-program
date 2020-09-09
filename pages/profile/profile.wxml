@@ -1,0 +1,63 @@
+<!--pages/profile/profile.wxml-->
+<view class="user_info">
+  <button wx:if="{{isShow}}" plain  bindtap="handleLogin">登录</button>
+  <view class="user_detail" wx:else>
+    <image class="img_bg" src="{{user.avatarUrl}}"></image>
+    <view class="user_avatarUrl">
+        <image src="{{user.avatarUrl}}" mode="widthFix"></image>
+        <view class="user_nickName">{{user.nickName}}</view>
+    </view>
+  </view>
+</view>
+<view class="main_content">
+  <view class="history">
+    <navigator class="item">
+      <view class="nums">{{collectNums}}</view>
+      <view class="text">收藏的店铺</view>
+    </navigator>
+    <navigator class="item" url="/pages/collect/collect">
+      <view class="nums">0</view>
+      <view class="text">收藏的商品</view>
+    </navigator>
+    <navigator class="item">
+      <view class="nums">0</view>
+      <view class="text">关注的商品</view>
+    </navigator>
+    <navigator class="item">
+      <view class="nums">0</view>
+      <view class="text">我的足迹</view>
+    </navigator>
+  </view>
+  <view class="my_orders">
+    <view class="orders_title">我的订单</view>
+    <view class="detail_wrap">
+      <navigator class="detail_item" url="/pages/order/order?type=1">
+        <view class="iconfont icon-ding_dan"></view>
+        <view class="desc">全部订单</view>
+      </navigator>
+      <navigator class="detail_item" url="/pages/order/order?type=2">
+        <view class="iconfont icon-fukuantongzhi"></view>
+        <view class="desc">待付款</view>
+      </navigator>
+      <navigator class="detail_item" url="/pages/order/order">
+        <view class="iconfont icon-receipt-address"></view>
+        <view class="desc">待收货</view>
+      </navigator>
+      <view class="detail_item">
+        <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
+        <view class="desc">退款/退货</view>
+      </view>
+    </view>
+  </view>
+  <view class="address">
+    收货地址管理
+  </view>
+  <view class="service">
+    <view class="concat item">联系客服</view>
+    <navigator class="feedback item" url="/pages/feedback/feedback">意见反馈</navigator>
+    <view class="about item">关于我们</view>
+  </view>
+  <view class="share">
+    把应用推荐给其他人
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/goodList/goodList.wxml-->
+<search_Input></search_Input>
+<tabControl titles="{{titles}}"></tabControl>
+<navigator class="goodslist_wrap" wx:for="{{goodslist}}" wx:key="goods_id" url="/pages/detail/detail?goods_id={{item.goods_id}}">
+  <view class="item_img">
+    <image src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}" mode="widthFix"></image>
+  </view>
+  <view class="item_content">
+    <view class="item_title">{{item.goods_name}}</view>
+    <view class="item_price">￥{{item.goods_price}}</view>
+  </view>
+</navigator>

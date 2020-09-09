@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tabControl": "../../components/tabControl/tabControl"
+  },
+  "navigationBarTitleText": "商品收藏"
+}

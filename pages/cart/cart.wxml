@@ -1,0 +1,58 @@
+<!--pages/cart/cart.wxml-->
+<view class="address_wrap">
+  <view class="btn_wrap" wx:if="{{ !address.userName}}">
+    <button class="add_address" type="primary" plain bindtap="handleAddAddress" >+ 添加收货地址</button>
+  </view>
+  <view class="address_info" wx:else>
+    <view class="user_info">
+      <view class="revice_name">{{address.userName}}</view>
+      <view class="detail_address">{{address.finalAddress}}</view>
+    </view>
+    <view class="revice_phone">{{address.telNumber}}</view>
+  </view>
+</view>
+<view class="cart_content">
+  <view class="cart_title">购物车</view>
+  <view class="cart_item_wrap" wx:for="{{cart}}" wx:key="goods_id">
+    <view class="check_wrap">
+      <checkbox-group bindchange="handleChange" data-id="{{item.goods_id}}">
+        <checkbox checked="{{item.goodsChecked}}"></checkbox>
+      </checkbox-group>
+    </view>
+    <navigator class="item_img">
+      <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+    </navigator>
+    <view class="goodsinfo_detail">
+      <view class="goods_title">{{item.goods_name}}</view>
+      <view class="goods_price_wrap">
+        <view class="goods_price">￥ {{item.goods_price}}</view>
+        <view class="tool_wrap">
+          <view class="num_edit" data-value="{{-1}}" bindtap="handleNum" data-id="{{item.goods_id}}">-</view>
+          <view class="goods_num">{{item.goodsNum}}</view>
+          <view class="num_edit" data-value="{{1}}" bindtap="handleNum" data-id="{{item.goods_id}}">+</view>
+        </view>
+      </view>
+    </view>
+  
+  </view>
+</view>
+<view class="footer_tool">
+  <view class="checkall_wrap">
+    <view class="checkall">
+      <checkbox-group bindchange="handleAll">
+        <checkbox checked="{{allChecked}}">全选</checkbox>
+      </checkbox-group>
+    </view>
+    <view class="total_price_wrap">
+      <view class="total_price">合计:<text>￥{{totalPrice}}</text></view>
+      <view class="post_price">包含运费</view>
+    </view>
+  </view>
+  <view class="goods_pay" bindtap="handlePayment">
+    结算({{totalNum}})
+  </view> 
+</view>
+
+
+
+

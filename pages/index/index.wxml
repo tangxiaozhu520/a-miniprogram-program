@@ -1,0 +1,26 @@
+<!--pages/index/index.wxml-->
+<search_Input></search_Input>
+<swiper autoplay circular indicator-dots indicator-active-color="#eb4450" class="swiper_wrap">
+  <swiper-item wx:for="{{swiperDatas}}" wx:key="goods_id" >
+    <navigator url="/pages/detail/detail?goods_id={{item.goods_id}}">
+      <image src="{{item.image_src}}" mode="widthFix"></image>
+    </navigator>
+  </swiper-item>
+</swiper>
+<view class="nav_wrap">
+  <navigator class="nav_item" wx:for="{{navList}}" wx:key="*this" url="/pages/category/cate" open-type="switchTab">
+    <image src="{{item.image_src}}" mode="widthFix"></image>
+  </navigator>
+</view>
+<view class="floor_wrap">
+  <view class="floor_item" wx:for="{{floorList}}" wx:key="floor_title" wx:for-item="item1">
+    <view class="floor_title">
+      <image src="{{item1.floor_title.image_src}}" mode="widthFix"></image>
+   </view>
+   <view class="floor_content">
+    <navigator wx:for="{{item1.product_list}}" wx:key="name" wx:for-item="item2" wx:for-index="index2" class="content_item" url="/pages/goodList/goodList">
+      <image src="{{item2.image_src}}" mode="{{index2===0 ? 'widthFix':'scaleToFill'}}"></image>
+    </navigator>
+   </view>
+  </view> 
+</view>
